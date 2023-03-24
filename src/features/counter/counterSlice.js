@@ -2,6 +2,12 @@ const initialState = {
   items: [],
 };
 
+// Declare the function here and export it so it can used in other components, and all we do is import the function in the components that need them. 
+// A banger, action creator
+export function incrementCount() {
+  return { type: 'count/increment' }
+}
+
 function counterReducer(state = initialState, action) {
   switch (action.type) {
     case "count/increment":
